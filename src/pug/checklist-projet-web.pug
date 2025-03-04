@@ -1,0 +1,248 @@
+html(lang="en")
+    head
+        title Page title
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Sora:300,400,500,600,700&subset=latin")
+        link(href="https://fonts.cdnfonts.com/css/general-sans?styles=135312,135310,135313,135303", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap", rel="stylesheet")
+        link(rel="stylesheet", href="css/tailwind/tailwind.min.css")
+        link(rel="stylesheet", href="css/main.css")
+        link(rel="icon", type="image/vnd.microsoft.icon", href="images/favicon.ico")
+        script(src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js", defer="defer")
+        script(type="text/javascript").
+                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PBQXHTM8');
+                
+        script(src="//cdn.cookie-script.com/s/4826537d445dfca93619e3993d620cac.js")
+        script(src="https://www.googletagmanager.com/gtag/js?id=G-MTJ8NRKRBE")
+        script(type="text/javascript").
+                    window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MTJ8NRKRBE');
+                
+        script(src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js")
+    body(class="antialiased bg-body text-body font-body")
+        div(class="")
+            section(x-data="{ mobileNavOpen: false }", class="relative overflow-hidden bg-blueGray-50")
+                img(class="absolute left-0 top-0 w-full h-full opacity-25", src="images/hero-gradient-warm-min.jpg", alt="hero gradient")
+                div(class="container mx-auto overflow-hidden relative")
+                    div(class="flex items-center justify-between px-4 py-5 bg-transparent lg:py-7")
+                        div(class="w-auto")
+                            div(class="flex flex-wrap items-center")
+                                div(class="w-auto mr-2 lg:mr-14 -mt-1 md:mt-0")
+                                    a(href="https://www.moodui.com")
+                                        img(src="images/mood-ui-dark.svg", alt="Logo Mood UI", class="w-auto h-6 md:h-9")
+                        div(class="w-auto -mt-2 md:mt-0")
+                            div(class="flex flex-wrap items-center")
+                                div(class="w-auto hidden lg:block lg:text-lg")
+                                    ul(class="flex items-center mr-16 text-purple-900 font-medium")
+                                        li(class="mr-9 hover:text-gray-700")
+                                            a(x-data="{ target: '#solutions' }", x-on:click="document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' })", href="https://www.moodui.com/#solutions") Solutions
+                                        li(class="mr-9 hover:text-gray-700")
+                                            a(x-data="{ target: '#portfolio' }", x-on:click="document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' })", href="https://www.moodui.com/#portfolio") Portfolio
+                                        li(class="mr-9 hover:text-gray-700")
+                                            a(x-data="{ target: '#methode' }", x-on:click="document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' })", href="https://www.moodui.com/#methode") Méthode
+                                        li(class="hover:text-gray-700")
+                                            a(x-data="{ target: '#tarifs' }", x-on:click="document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' })", href="https://www.moodui.com/#tarifs") Tarifs
+                                div(class="w-auto block")
+                                    div(class="inline-block")
+                                        a(class="block py-3 md:py-4 px-4 md:px-6 w-full border transition ease-in-out duration-200 w-full font-medium border border-gray-300 hover:border-purple-300 rounded-full focus:ring hover:bg-purple-100 transition ease-in-out duration-200 shadow-sm focus:ring-purple-50 bg-white text-purple-900 lg:text-lg", href="https://calendly.com/firelab") Réserver un audit
+                                div(class="w-auto hidden lg:hidden mt-2")
+                                    button(x-on:click="mobileNavOpen = !mobileNavOpen")
+                                        svg(class="text-transparent", width="51", height="51", viewbox="0 0 56 56", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                            rect(width="56", height="56", rx="28", fill="currentColor")
+                                            path(d="M37 32H19M37 24H19", stroke="black", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+                    div(:class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}", class="fixed top-0 left-0 bottom-0 sm:max-w-xs z-50 w-5/6 hidden")
+                        div(x-on:click="mobileNavOpen = !mobileNavOpen", class="fixed inset-0 bg-gray-800 opacity-80")
+                        nav(class="relative z-10 pt-8 bg-white h-full overflow-y-auto px-5")
+                            div(class="flex flex-wrap justify-between h-full")
+                                div(class="w-full")
+                                    div(class="flex items-center justify-between -m-2")
+                                        div(class="w-auto p-2")
+                                            a(class="inline-block", href="#")
+                                                img(src="images/mood-ui-dark.svg", alt="", class="h-9")
+                                        div(class="w-auto p-2")
+                                            button(x-on:click="mobileNavOpen = !mobileNavOpen")
+                                                svg(width="24", height="24", viewbox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                                    path(d="M6 18L18 6M6 6L18 18", stroke="#111827", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                                div(class="flex flex-col justify-center py-16 w-full")
+                                    ul
+                                        li(class="mb-12")
+                                            a(class="font-medium hover:text-gray-700", href="#") Features
+                                        li(class="mb-12")
+                                            a(class="font-medium hover:text-gray-700", href="#") Solutions
+                                        li(class="mb-12")
+                                            a(class="font-medium hover:text-gray-700", href="#") Resources
+                                        li
+                                            a(class="font-medium hover:text-gray-700", href="#") Pricing
+                                div(class="flex flex-col justify-end w-full pb-8")
+                                    div(class="flex flex-wrap")
+                                        div(class="w-full")
+                                            div(class="block")
+                                                button(class="py-3 px-5 w-full text-white font-semibold border border-indigo-700 rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200", type="button") Try 14 Days Free Trial
+            section(data-from-ai="false", class="py-32 bg-white overflow-hidden")
+                div(class="container px-4 mx-auto")
+                    div(class="flex flex-wrap max-w-7xl mx-auto -m-8")
+                        div(class="w-full p-8")
+                            div(class="max-w-4xl mx-auto")
+                                h1(class="text-3xl font-bold mb-8 text-gray-900", contenteditable="true") Check-list lancement projet - Projet WordPress
+                                div(class="grid gap-8")
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 1. Validation du devis et aspects financiers
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Confirmation du budget total
+                                            li • Échéancier de paiement (acompte, échelonnement)
+                                            li • Options ou fonctionnalités à ajuster selon le budget
+                                            li • Coûts récurrents (hébergement, maintenance, licences)
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 2. Planning et délais
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Date de début souhaitée
+                                            li • Échéances intermédiaires
+                                            li • Date de mise en ligne visée
+                                            li • Disponibilité du client pour les validations
+                                            li • Planning des formations éventuelles
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 3. Contenu et ressources nécessaires
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Textes et contenus éditoriaux
+                                            li • Photos, vidéos, médias
+                                            li • Logo et charte graphique
+                                            li • Accès aux comptes existants
+                                            li • Contacts des personnes impliquées
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 4. Aspects techniques
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Nom de domaine (existant ou à créer)
+                                            li • Solution d'hébergement
+                                            li • Emails et configurations spécifiques
+                                            li • Besoins en sécurité particuliers
+                                            li • Intégrations tierces (CRM, API, etc.)
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 5. Validation des fonctionnalités
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Pages et sections du site
+                                            li • Fonctionnalités spécifiques
+                                            li • Besoins en formulaires
+                                            li • Modules e-commerce si nécessaire
+                                            li • Multilingue si requis
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 6. Accompagnement post-projet
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Besoins en formation
+                                            li • Contrat de maintenance
+                                            li • Support technique
+                                            li • Mises à jour régulières
+                                            li • Documentation utilisateur
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 7. Aspects légaux et conformité
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • RGPD et politique de confidentialité
+                                            li • Mentions légales
+                                            li • CGV/CGU si nécessaire
+                                            li • Accessibilité web
+                                            li • Droits d'utilisation des contenus
+                                    | 
+                                    section(class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-violet-500")
+                                        h2(class="text-xl font-semibold mb-4 text-violet-600") 8. Prochaines étapes
+                                        ul(class="space-y-2 text-gray-700")
+                                            li • Signature du devis/contrat
+                                            li • Versement de l'acompte
+                                            li • Planning détaillé
+                                            li • Prochaine réunion de travail
+                                            li • Liste des éléments à fournir par le client
+            section(class="relative pt-24 pb-28 bg-white overflow-hidden border-t border-blueGray-200")
+                div(class="relative z-10 container px-4 mx-auto")
+                    div(class="flex flex-wrap justify-between -m-8")
+                        div(class="w-full sm:w-1/2 lg:w-2/12 pl-8 pt-7")
+                            a(class="inline-block", href="https://www.moodui.com")
+                                img(src="images/mood-ui-dark.svg", alt="", class="h-9")
+                        div(class="w-full sm:w-1/2 lg:w-2/12 p-8")
+                            h3(class="mb-6 font-semibold leading-normal") Services
+                            ul
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Design d'interfaces
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Sites & landing pages
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Design systems
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Branding digital
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Formation outils
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Optimisation conversion
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Dashboard analytics
+                                li
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Migration & déploiement
+                        div(class="w-full sm:w-1/2 lg:w-2/12 p-8")
+                            h3(class="mb-6 font-semibold leading-normal") Formation
+                            ul
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Gestion de projet UI
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Outils de productivité
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Workflows digitaux
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Design thinking
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Sprint méthodologie
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Analytics & CMS
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Visual marketing
+                                li
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Formation sur mesure
+                        div(class="w-full sm:w-1/2 lg:w-2/12 p-8")
+                            h3(class="mb-6 font-semibold leading-normal") Resources
+                            ul
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Blog UI Marketing
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Études de cas
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Guide UI/UX
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Moodboards gratuits
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Checklist projet
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Podcast UI Mood
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Newsletter
+                                li
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Documentation
+                        div(class="w-full sm:w-1/2 lg:w-2/12 p-8")
+                            h3(class="mb-6 font-semibold leading-normal") Legal
+                            ul
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") À propos
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Notre équipe
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Nous contacter            
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Carrières
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Médias & Presse            
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Mentions légales
+                                li(class="mb-3.5")
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") Politique de confidentialité
+                                li
+                                    a(class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed", href="#") CGV
