@@ -1,0 +1,16 @@
+@import url(https://cdn.jsdelivr.net/npm/cal-sans@1.0.1/index.css);
+.fadeInUp {
+    animation: fadeInUp 0.75s forwards;
+    animation-delay: 0s;
+}
+@keyframes fadeInUp{
+    0%{
+        opacity:0;
+        transform:translateY(20%)
+    }
+    to{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
+
